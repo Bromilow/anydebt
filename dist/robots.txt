@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://anydebtcollections.co.za/sitemap.xml

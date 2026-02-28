@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -21,8 +22,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Your practice exists to heal people — not to chase payments. We handle your outstanding accounts with the professionalism and sensitivity that your patients and your profession demand.
         </p>
         <div class="medical-hero__ctas">
-          <a href="/contact" class="btn btn-primary btn-lg">Free Consultation for Practices</a>
-          <a href="/how-it-works" class="btn btn-outline-white btn-lg">How It Works</a>
+          <a href={`${base}contact`} class="btn btn-primary btn-lg">Free Consultation for Practices</a>
+          <a href={`${base}how-it-works`} class="btn btn-outline-white btn-lg">How It Works</a>
         </div>
       </div>
       <div class="medical-hero__badge" aria-hidden="true">
@@ -230,7 +231,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <p class="crosslinks-sub">We work with organisations across every sector. Explore our other specialisations or reach out to discuss your specific needs.</p>
         </div>
         <div class="crosslinks-grid">
-          <a href="/industries/schools" class="crosslink-card reveal delay-1" aria-label="Debt recovery for schools and education">
+          <a href={`${base}industries/schools`} class="crosslink-card reveal delay-1" aria-label="Debt recovery for schools and education">
             <div class="crosslink-card__icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-5h6v5"/></svg>
             </div>
@@ -240,7 +241,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </div>
             <svg class="crosslink-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="/industries/business" class="crosslink-card reveal delay-2" aria-label="Debt recovery for businesses">
+          <a href={`${base}industries/business`} class="crosslink-card reveal delay-2" aria-label="Debt recovery for businesses">
             <div class="crosslink-card__icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
             </div>
@@ -267,7 +268,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Book a free consultation with Angelique. We'll review your outstanding patient accounts, explain our approach in plain language, and show you how much you could be recovering — with no upfront cost and no obligation.
         </p>
         <div class="medical-cta__actions">
-          <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
+          <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
           <div class="medical-cta__contact">
             <span>Or call directly:</span>
             <a href="tel:+27621165638" class="medical-cta__tel">062 116 5638</a>

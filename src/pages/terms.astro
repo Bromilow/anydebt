@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -128,7 +129,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li>The Client will not disclose the Company's methodologies, pricing, or any proprietary information to third parties.</li>
           <li>Confidentiality obligations survive the termination of the service agreement for a period of 3 years.</li>
         </ul>
-        <p>All personal information handled by the Company is treated in accordance with our <a href="/privacy-policy">Privacy Policy</a> and the Protection of Personal Information Act (POPIA).</p>
+        <p>All personal information handled by the Company is treated in accordance with our <a href={`${base}privacy-policy`}>Privacy Policy</a> and the Protection of Personal Information Act (POPIA).</p>
       </div>
 
       <!-- 6. Limitation of Liability -->
@@ -216,7 +217,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="policy-cta">
     <div class="container policy-cta-inner">
       <p>Ready to get started? Free consultation, zero risk.</p>
-      <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
+      <a href={`${base}contact`} class="btn btn-primary">Book Free Consultation</a>
     </div>
   </section>
 

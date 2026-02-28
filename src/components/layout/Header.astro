@@ -1,19 +1,20 @@
 ---
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
+  { label: 'Home', href: base },
+  { label: 'About', href: `${base}about` },
+  { label: 'Services', href: `${base}services` },
   {
     label: 'Industries',
-    href: '/industries',
+    href: `${base}industries`,
     children: [
-      { label: 'Schools & Education', href: '/industries/schools' },
-      { label: 'Doctors & Dentists', href: '/industries/medical' },
-      { label: 'Business Collections', href: '/industries/business' },
+      { label: 'Schools & Education', href: `${base}industries/schools` },
+      { label: 'Doctors & Dentists', href: `${base}industries/medical` },
+      { label: 'Business Collections', href: `${base}industries/business` },
     ],
   },
-  { label: 'How It Works', href: '/how-it-works' },
-  { label: 'FAQ', href: '/faq' },
+  { label: 'How It Works', href: `${base}how-it-works` },
+  { label: 'FAQ', href: `${base}faq` },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -21,8 +22,8 @@ const currentPath = Astro.url.pathname;
 
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a href="/" class="header-logo" aria-label="Any Debt Collections — Home">
-      <img src="/assets/logotransparent.png" alt="Any Debt Collections" height="160" />
+    <a href={base} class="header-logo" aria-label="Any Debt Collections — Home">
+      <img src={`${base}assets/logotransparent.png`} alt="Any Debt Collections" height="160" />
     </a>
 
     <nav class="header-nav" aria-label="Main navigation">
@@ -66,7 +67,7 @@ const currentPath = Astro.url.pathname;
         </svg>
         062 116 5638
       </a>
-      <a href="/contact" class="btn btn-primary btn-sm">Free Consultation</a>
+      <a href={`${base}contact`} class="btn btn-primary btn-sm">Free Consultation</a>
     </div>
 
     <!-- Mobile hamburger -->
@@ -116,7 +117,7 @@ const currentPath = Astro.url.pathname;
       </svg>
       anycollections@outlook.com
     </a>
-    <a href="/contact" class="btn btn-primary btn-full">Book Free Consultation</a>
+    <a href={`${base}contact`} class="btn btn-primary btn-full">Book Free Consultation</a>
   </div>
 </div>
 

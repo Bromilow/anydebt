@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -21,8 +22,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Outstanding school fees don't just affect your balance sheet — they disrupt every aspect of how your school operates. We recover what you're owed while treating your community with dignity.
         </p>
         <div class="schools-hero__ctas">
-          <a href="/contact" class="btn btn-primary btn-lg">Free Consultation for Schools</a>
-          <a href="/how-it-works" class="btn btn-outline-white btn-lg">How It Works</a>
+          <a href={`${base}contact`} class="btn btn-primary btn-lg">Free Consultation for Schools</a>
+          <a href={`${base}how-it-works`} class="btn btn-outline-white btn-lg">How It Works</a>
         </div>
       </div>
       <div class="schools-hero__badge" aria-hidden="true">
@@ -236,7 +237,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <p class="crosslinks-sub">Any Debt Collections works with organisations of every type. Explore our other specialisations or get in touch to discuss your specific situation.</p>
         </div>
         <div class="crosslinks-grid">
-          <a href="/industries/medical" class="crosslink-card reveal delay-1" aria-label="Debt recovery for doctors and dentists">
+          <a href={`${base}industries/medical`} class="crosslink-card reveal delay-1" aria-label="Debt recovery for doctors and dentists">
             <div class="crosslink-card__icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
@@ -246,7 +247,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </div>
             <svg class="crosslink-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="/industries/business" class="crosslink-card reveal delay-2" aria-label="Debt recovery for businesses">
+          <a href={`${base}industries/business`} class="crosslink-card reveal delay-2" aria-label="Debt recovery for businesses">
             <div class="crosslink-card__icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
             </div>
@@ -273,7 +274,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Book a free, no-obligation consultation with Angelique. We'll review your outstanding accounts, explain our approach, and give you a clear picture of what we can recover — before you commit to anything.
         </p>
         <div class="schools-cta__actions">
-          <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
+          <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
           <div class="schools-cta__contact">
             <span>Or call directly:</span>
             <a href="tel:+27621165638" class="schools-cta__tel">062 116 5638</a>

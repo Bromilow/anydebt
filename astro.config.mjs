@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://anydebtcollections.co.za',
+  base: '/anydebt',
   outDir: 'docs',
   integrations: [
     sitemap({

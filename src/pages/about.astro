@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -241,8 +242,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Book a free, no-obligation consultation and let's talk about the accounts you need recovered. No upfront fees. No risk. Just results.
       </p>
       <div class="about-cta-btns">
-        <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
-        <a href="/services" class="btn btn-outline btn-lg">Explore Our Services</a>
+        <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
+        <a href={`${base}services`} class="btn btn-outline btn-lg">Explore Our Services</a>
       </div>
     </div>
   </section>

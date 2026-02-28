@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -69,7 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             All industries: schools, medical, commercial
           </li>
         </ul>
-        <a href="/contact" class="btn btn-primary">Start Collecting Today</a>
+        <a href={`${base}contact`} class="btn btn-primary">Start Collecting Today</a>
       </div>
 
       <div class="service-visual reveal-right delay-2">
@@ -145,7 +146,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Documented and reported monthly
           </li>
         </ul>
-        <a href="/contact" class="btn btn-outline-white">Enquire About Bureau Listings</a>
+        <a href={`${base}contact`} class="btn btn-outline-white">Enquire About Bureau Listings</a>
       </div>
     </div>
   </section>
@@ -188,7 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Legitimate methods, POPIA compliant
           </li>
         </ul>
-        <a href="/contact" class="btn btn-primary">Trace a Missing Debtor</a>
+        <a href={`${base}contact`} class="btn btn-primary">Trace a Missing Debtor</a>
       </div>
 
       <div class="service-visual reveal-right delay-2">
@@ -264,7 +265,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Admissible audit trail for legal proceedings
           </li>
         </ul>
-        <a href="/contact" class="btn btn-outline-white">Put Your Accounts on a Schedule</a>
+        <a href={`${base}contact`} class="btn btn-outline-white">Put Your Accounts on a Schedule</a>
       </div>
     </div>
   </section>
@@ -307,7 +308,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Clear, jargon-free reporting format
           </li>
         </ul>
-        <a href="/contact" class="btn btn-primary">Request a Sample Report</a>
+        <a href={`${base}contact`} class="btn btn-primary">Request a Sample Report</a>
       </div>
 
       <div class="service-visual reveal-right delay-2">
@@ -383,7 +384,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Full audit trail retained for your records
           </li>
         </ul>
-        <a href="/contact" class="btn btn-outline-white">Learn About Our Payment Cycle</a>
+        <a href={`${base}contact`} class="btn btn-outline-white">Learn About Our Payment Cycle</a>
       </div>
     </div>
   </section>
@@ -426,7 +427,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Adapts to your communication preferences
           </li>
         </ul>
-        <a href="/contact" class="btn btn-primary">Talk to Us Directly</a>
+        <a href={`${base}contact`} class="btn btn-primary">Talk to Us Directly</a>
       </div>
 
       <div class="service-visual reveal-right delay-2">
@@ -461,8 +462,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Book a free consultation and let's review the accounts you need recovered. We'll tell you exactly how we'd approach your case — no obligation.
       </p>
       <div class="services-cta-btns">
-        <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
-        <a href="/how-it-works" class="btn btn-outline-white btn-lg">See How It Works</a>
+        <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
+        <a href={`${base}how-it-works`} class="btn btn-outline-white btn-lg">See How It Works</a>
       </div>
     </div>
   </section>

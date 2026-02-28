@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -115,7 +116,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Email Us
             </a>
-            <a href="/contact" class="btn btn-primary btn-full">Book Online</a>
+            <a href={`${base}contact`} class="btn btn-primary btn-full">Book Online</a>
           </div>
         </div>
 
@@ -523,8 +524,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         The first step costs you nothing. A 15-minute conversation with Angelique is all it takes to understand exactly what we can recover for you and how we'll go about it.
       </p>
       <div class="hiw-cta-btns">
-        <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
-        <a href="/services" class="btn btn-outline-white btn-lg">View All Services</a>
+        <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
+        <a href={`${base}services`} class="btn btn-outline-white btn-lg">View All Services</a>
       </div>
       <p class="hiw-cta-micro">No upfront fees. No obligation. Nationwide service.</p>
     </div>

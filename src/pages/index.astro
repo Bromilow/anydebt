@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <BaseLayout
@@ -21,8 +22,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           South Africa's trusted debt collection partner for schools, medical practices, and businesses. No upfront fees. No risk. Just results — and your money back, monthly.
         </p>
         <div class="hero-ctas">
-          <a href="/contact" class="btn btn-primary btn-lg">Book a Free Consultation</a>
-          <a href="/how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+          <a href={`${base}contact`} class="btn btn-primary btn-lg">Book a Free Consultation</a>
+          <a href={`${base}how-it-works`} class="btn btn-outline btn-lg">See How It Works</a>
         </div>
         <div class="hero-trust">
           <span class="trust-item">
@@ -44,7 +45,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-img-wrap">
           <div class="hero-img-placeholder">
-            <img src="/assets/logo.png" alt="" class="hero-logo-mark" />
+            <img src={`${base}assets/logo.png`} alt="" class="hero-logo-mark" />
             <p class="hero-img-note">Add professional photography here</p>
           </div>
           <div class="hero-accent"></div>
@@ -122,7 +123,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="problem-body">
           <strong>You didn't build your school, practice, or business to become a debt collector. That's our job.</strong>
         </p>
-        <a href="/contact" class="btn btn-outline">Let Us Collect for You</a>
+        <a href={`${base}contact`} class="btn btn-outline">Let Us Collect for You</a>
       </div>
 
       <div class="pain-cards">
@@ -176,7 +177,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Debt Collection</h3>
             <p>Professional, persistent recovery using proven, ethical methods. We do the hard work so you don't have to.</p>
-            <a href="/services#debt-collection" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#debt-collection`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="service-card reveal delay-1">
@@ -187,7 +188,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Credit Bureau Listings</h3>
             <p>Non-paying debtors are listed on credit bureaus — creating real consequences that motivate payment.</p>
-            <a href="/services#credit-bureau" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#credit-bureau`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="service-card reveal delay-2">
@@ -198,7 +199,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Tracing Services</h3>
             <p>Debtor relocated or gone quiet? Our nationwide tracing capabilities find them wherever they are.</p>
-            <a href="/services#tracing" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#tracing`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="service-card reveal delay-1">
@@ -209,7 +210,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Regular Follow-Ups</h3>
             <p>Structured, consistent contact schedules. No case ever goes cold. Relentless persistence on your behalf.</p>
-            <a href="/services#follow-ups" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#follow-ups`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="service-card reveal delay-2">
@@ -220,7 +221,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Monthly Reporting</h3>
             <p>Full transparency. A detailed report of every case status and every rand recovered, delivered monthly.</p>
-            <a href="/services#reporting" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#reporting`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="service-card reveal delay-3">
@@ -231,7 +232,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Monthly Payments to You</h3>
             <p>Recovered funds paid directly into your account each month. No delays, no complex settlement processes.</p>
-            <a href="/services#payments" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#payments`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="service-card service-card-full reveal">
@@ -242,7 +243,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <h3>Client Relationship Management</h3>
             <p>A dedicated point of contact. Consistent communication. We treat your business with the same care you do.</p>
-            <a href="/services#crm" class="service-link">Learn more <span aria-hidden="true">→</span></a>
+            <a href={`${base}services#crm`} class="service-link">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </article>
       </div>
@@ -272,7 +273,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="eyebrow" style="color:var(--color-crimson);">Schools &amp; Education</span>
             <h2>Protecting School Finances — From Pre-School to High School</h2>
             <p>Unpaid school fees affect every child's education. We recover outstanding fees ethically and respectfully, preserving your school's reputation and parent relationships. Private schools, public schools, and pre-schools — we understand the sensitivity required.</p>
-            <a href="/industries/schools" class="btn btn-outline-white">Learn More About Schools</a>
+            <a href={`${base}industries/schools`} class="btn btn-outline-white">Learn More About Schools</a>
           </div>
         </div>
 
@@ -282,7 +283,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="eyebrow" style="color:var(--color-crimson);">Doctors &amp; Dentists</span>
             <h2>Recover Patient Fees Without Compromising Care</h2>
             <p>Medical professionals face a unique challenge: patients are also people in vulnerable moments. We collect outstanding medical and dental fees with the empathy your patients deserve — and the firmness your practice needs to survive.</p>
-            <a href="/industries/medical" class="btn btn-outline-white">Learn More About Medical</a>
+            <a href={`${base}industries/medical`} class="btn btn-outline-white">Learn More About Medical</a>
           </div>
           <div class="industry-card-visual">
             <div class="industry-img-placeholder medical">
@@ -302,7 +303,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="eyebrow" style="color:var(--color-crimson);">Businesses of All Sizes</span>
             <h2>From Startups to Corporates — Get Paid What You're Owed</h2>
             <p>Whether you're a sole proprietor waiting on one critical invoice or an enterprise managing hundreds of accounts, our approach scales to your needs. No debt is too big or too small for us to recover.</p>
-            <a href="/industries/business" class="btn btn-outline-white">Learn More About Business</a>
+            <a href={`${base}industries/business`} class="btn btn-outline-white">Learn More About Business</a>
           </div>
         </div>
       </div>
@@ -357,7 +358,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="process-cta reveal">
         <h3>Ready to Start? Your First Consultation Is Free.</h3>
-        <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
+        <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
       </div>
     </div>
   </section>
@@ -476,7 +477,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="eyebrow">Common Questions</span>
         <h2 class="section-heading" style="font-size:2rem;">Everything You Need to Know — Before You Even Ask</h2>
         <p style="color:var(--color-warm-600);margin:1rem 0 2rem;">We believe in full transparency. Here are the questions we hear most often.</p>
-        <a href="/faq" class="btn btn-outline">View All FAQs</a>
+        <a href={`${base}faq`} class="btn btn-outline">View All FAQs</a>
       </div>
       <div class="faq-list reveal-right">
         <div class="faq-item">
@@ -536,7 +537,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Book a free, no-obligation consultation today. Tell us about your outstanding debts — we'll show you exactly how we can help, with zero risk and zero upfront cost.
       </p>
       <div class="final-cta-buttons reveal delay-2">
-        <a href="/contact" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
+        <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Your Free Consultation</a>
         <a href="tel:+27621165638" class="btn btn-outline-white btn-lg">Call Us: 062 116 5638</a>
       </div>
       <p class="final-cta-trust reveal delay-3">

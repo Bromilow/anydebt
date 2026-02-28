@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 
 const faqs = {
   fees: {
@@ -88,7 +89,7 @@ const faqs = {
       </p>
       <div class="faq-hero__cta">
         <a href="#faq-fees" class="btn btn-outline-white btn-lg">Browse Questions</a>
-        <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
+        <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
       </div>
     </div>
     <div class="faq-hero__wave" aria-hidden="true">
@@ -258,7 +259,7 @@ const faqs = {
           <p>Our free consultation is a no-obligation conversation — call us, email us, or complete the contact form. Angelique will answer any question you have personally.</p>
         </div>
         <div class="faq-cta__actions">
-          <a href="/contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
+          <a href={`${base}contact`} class="btn btn-primary btn-lg">Book Free Consultation</a>
           <a href="mailto:anycollections@outlook.com" class="btn btn-outline-white btn-lg">Email Us Directly</a>
         </div>
       </div>

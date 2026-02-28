@@ -17,6 +17,7 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://anydebtcollections.co.za');
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 <!DOCTYPE html>
 <html lang="en-ZA">
@@ -45,11 +46,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://anydebtc
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}assets/favicon/apple-touch-icon.png`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}assets/favicon/favicon-32x32.png`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${base}assets/favicon/favicon-16x16.png`} />
+    <link rel="manifest" href={`${base}assets/favicon/site.webmanifest`} />
+    <link rel="shortcut icon" href={`${base}assets/favicon/favicon.ico`} />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -105,7 +106,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://anydebtc
     </a>
 
     <div class="mobile-cta-bar" id="mobileCTABar">
-      <a href="/contact" class="mobile-cta-link">Book Free Consultation — No Upfront Fees</a>
+      <a href={`${base}contact`} class="mobile-cta-link">Book Free Consultation — No Upfront Fees</a>
     </div>
 
     <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Back to top">
@@ -115,10 +116,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://anydebtc
     </button>
 
     <!-- Scripts -->
-    <script src="/scripts/scroll-animations.js" defer></script>
-    <script src="/scripts/mobile-menu.js" defer></script>
-    <script src="/scripts/accordion.js" defer></script>
-    <script src="/scripts/counter.js" defer></script>
+    <script src={`${base}scripts/scroll-animations.js`} defer></script>
+    <script src={`${base}scripts/mobile-menu.js`} defer></script>
+    <script src={`${base}scripts/accordion.js`} defer></script>
+    <script src={`${base}scripts/counter.js`} defer></script>
 
     <style>
       /* WhatsApp FAB */

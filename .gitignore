@@ -1,8 +1,9 @@
 # Dependencies
 node_modules/
 
-# Build output (Astro generates this — not needed in git if using CI/CD)
+# Build output (not needed in git if using GitHub Actions CI/CD)
 dist/
+public_html/
 
 # OS files
 .DS_Store
